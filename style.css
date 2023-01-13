@@ -1,0 +1,269 @@
+/* ===============================
+            common styles
+==================================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+    --clr-primary: #562EFF;
+    --clr-body: #F3F1FF;
+    --clr-white: #fff;
+    --clr-black: #000;
+
+    --ff-poppins: 'Poppins', sans-serif;
+    --ff-roboto: 'Roboto',
+        sans-serif;
+
+}
+
+body {
+    background-color: var(--clr-body);
+}
+
+/* ==================================
+            Utility classes
+=====================================*/
+.container {
+    display: block;
+    max-width: 870px;
+    width: 96%;
+    margin-inline: auto;
+}
+
+.section-title {
+    color: var(--clr-primary);
+    font-family: var(--ff-poppins);
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* =========================================
+                Header style
+ ========================================== */
+.main-header {
+    background-color: var(--clr-primary);
+    padding-block: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo-content {
+    color: var(--clr-white);
+    display: flex;
+    align-items: center;
+}
+
+nav .logo-content a {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: var(--clr-white);
+    font-family: var(--ff-poppins);
+    text-decoration: none;
+    gap: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav ul li a {
+    color: var(--clr-white);
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: var(--ff-poppins);
+}
+
+/* =======================================
+        players and blog sec
+==========================================*/
+.top-players-blog {
+    margin-top: 2rem;
+}
+
+.inner-players-blog {
+    padding: 30px;
+    background-color: var(--clr-white);
+    border-radius: 5px;
+}
+
+/* player */
+.players {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+    padding-block: 40px;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.player img {
+    width: 56px;
+}
+
+.player h3 {
+    color: var(--clr-black);
+    font-size: 18px;
+    font-weight: 500;
+    font-family: var(--ff-poppins);
+}
+
+/* blog */
+.blog-content .section-title {
+    margin-top: 30px;
+}
+
+.blogs {
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 26px;
+    column-gap: 45px;
+}
+
+.blog {
+    display: flex;
+    gap: 1rem;
+}
+
+.blog img {
+    width: 177px;
+}
+
+.blog .blog-text {
+    font-family: var(--ff-poppins);
+}
+
+.blog .blog-text h3 {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.blog .blog-text p {
+    color: #9F9F9F;
+    font-size: 1rem;
+}
+
+.blog .blog-text p a {
+    color: var(--clr-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.top-player-hr {
+    border: none;
+    height: 1px;
+    background-color: gray;
+}
+
+/* ================================
+            course
+===================================*/
+.latest-course {
+    margin-block: 20px;
+}
+
+.inner-course {
+    padding: 24px;
+    background: var(--clr-white);
+    border-radius: 5px;
+}
+
+.courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 13px;
+}
+
+.course {
+    width: 252px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.course>img {
+    width: 224px;
+}
+
+.course-description {
+    font-family: var(--ff-roboto);
+}
+
+.course-description .course-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.course-description .course-publisher {
+    font-size: 15px;
+    font-weight: 400;
+    color: #ED6B4F;
+    padding-block: 8px;
+}
+
+.course-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.course-rating {
+    display: flex;
+}
+
+.course-rating ul {
+    display: flex;
+    list-style: none;
+}
+
+.course-rating ul li {
+    color: #FFC014;
+}
+
+.course-duration {
+    background-color: #FEE5DF;
+    padding: 0.3rem;
+    border-radius: 50px;
+    color: #ED6B4F;
+}
+
+.course-duration h2 {
+    font-size: 15px;
+}
+
+/* responsive style */
+@media screen and (max-width:576px) {
+    .players {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .course {
+        display: block;
+        margin-inline: auto;
+    }
+}
